@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<DesignerComponent>
+  <Header>
+    <Name>d3 Simple Radial</Name>
+    <IName>d3SR</IName>
+    <Description>D3 Simple Radial</Description>
+    <Category>D3COMPONENTS</Category>
+    <CatDescription>D3 Components</CatDescription>
+    <Type>PalleteEntry</Type>
+    <Version>1.0</Version>
+  </Header>
+  <Contents>
+    <Model>
+      <!-- Component specific options -->
+      <Property>width</Property>
+      <Property>height</Property>
+      <!-- Leave this ones for every component -->
+      <Definition name="chartDefinition">
+          <Property>dataSource</Property>
+      </Definition>
+      <Property name="parameters">xActionArrayParameter</Property>
+      <Property>executeAtStart</Property>
+      <Property>preChange</Property>
+      <Property>postChange</Property>
+      <Property>postFetch</Property>
+      <Property>customfunction</Property>
+      <Property>htmlObject</Property>
+      <Property>preExecution</Property>
+      <Property>postExecution</Property>
+      <Property>tooltip</Property>
+      <Property>listeners</Property>
+      <Property>refreshPeriod</Property>
+      <Property>unit</Property>
+      <Property>percent</Property>
+      <Property name="colors">colors</Property>
+      <Property>thickness</Property>
+      <Property>dataFixed</Property>
+      <Property>dataInColumns</Property>
+    </Model>
+    <Implementation>
+      <Code src="d3SR.js"/>
+      <!--Styles>
+        <Style version="1.0" src="d3Component.css">d3Component</Style>
+      </Styles-->
+      <Dependencies>
+        <Dependency src="../commons/lib/d3.js" version="343">d3js</Dependency>
+        <Dependency src="../commons/d3ComponentBase.js" version="1">d3ComponentBase</Dependency>
+      </Dependencies>
+      <CustomProperties>
+        <DesignerProperty>
+          <Header>
+            <Name>unit</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>Unit</Description>
+            <Tooltip>Unit</Tooltip>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>51</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>percent</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>"true"</DefaultValue>
+            <Description>100%</Description>
+            <Tooltip></Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>40</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>thickness</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>6</DefaultValue>
+            <Description>Thickness</Description>
+            <Tooltip>Thickness</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Integer</InputType>
+            <OutputType>Number</OutputType>
+            <Order>40</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>dataInColumns</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>"false"</DefaultValue>
+            <Description>Data in columns</Description>
+            <Tooltip>Data in columns</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>40</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>dataFixed</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>Data Fixed</Description>
+            <Tooltip>Data Fixed</Tooltip>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>51</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+		<!-- <DesignerProperty>
+		  <Header>
+		    <Name>inputFormat</Name>
+		    <Parent>BaseProperty</Parent>
+		    <DefaultValue>YYYY-MM-DD</DefaultValue>
+		    <Description>Input format</Description>
+		    <Tooltip>Input date format as used by moment.js</Tooltip>
+		    <InputType>String</InputType>
+		    <OutputType>String</OutputType>
+		    <Order>30</Order>
+		    <Version>1.0</Version>
+		  </Header>
+		</DesignerProperty> -->
+	  </CustomProperties>
+    </Implementation>
+  </Contents>
+</DesignerComponent>
